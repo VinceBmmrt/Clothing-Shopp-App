@@ -4,7 +4,7 @@ import "./categories.styles.scss";
 const CategoryItem = ({ category }) => {
   const { imageUrl, title } = category;
   return (
-    <div className="category-item-container">
+    <Link className="category-item-container" to={`/shop/${title}`}>
       <div
         className="background-image"
         style={{
@@ -13,9 +13,9 @@ const CategoryItem = ({ category }) => {
       ></div>
       <div className="category-body-container">
         <h2>{title}</h2>
-        <Link to={`/shop/${title}`}>Shop Now</Link>
+        <div>Shop Now</div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default CategoryItem;
