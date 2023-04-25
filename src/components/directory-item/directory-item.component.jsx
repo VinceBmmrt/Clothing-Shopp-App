@@ -3,13 +3,12 @@ import {
   Body,
   DirectoryItemContainer,
 } from "./directory-item.styles";
+import { Link } from "react-router-dom";
 
 const DirectoryyItem = ({ category }) => {
   const { imageUrl, title } = category;
   return (
-    <DirectoryItemContainer
-    //to={`/shop/${title}`}
-    >
+    <DirectoryItemContainer to={`/shop/${title}`}>
       <BackgroundImage imageUrl={imageUrl} />
 
       <Body>
