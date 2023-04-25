@@ -16,11 +16,17 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const NavLinksContainer = styled.div`
+  margin-left: 400px;
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 export const NavLink = styled(Link)`
