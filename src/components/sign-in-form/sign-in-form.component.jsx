@@ -5,7 +5,7 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
-import "./sign-in-form.styles.scss";
+import { SignupContainer, ButtonContainer } from "./sign-in-form.styles.jsx";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
@@ -54,7 +54,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="signup-container">
+    <SignupContainer>
       <h2>Already have an account ?</h2>
       <span>Sign in with password and email</span>
       <form onSubmit={handleSubmit}>
@@ -75,7 +75,7 @@ const SignInForm = () => {
           name="password"
           value={password}
         />
-        <div className="buttons-container">
+        <ButtonContainer>
           <Button type="submit">Sign In</Button>
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
@@ -84,9 +84,9 @@ const SignInForm = () => {
           >
             Google sign in
           </Button>
-        </div>
+        </ButtonContainer>
       </form>
-    </div>
+    </SignupContainer>
   );
 };
 export default SignInForm;
