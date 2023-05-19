@@ -6,13 +6,13 @@ import {
   DirectoryItemContainer,
 } from "./directory-item.styles";
 
-const DirectoryyItem = ({ category }) => {
+const DirectoryItem = ({ category }) => {
   const { imageUrl, title, route } = category;
   const navigate = useNavigate();
   const onNavigateHandler = () => navigate(route);
   return (
     <DirectoryItemContainer
-      onClick={onNavigateHandler}
+      onclick={onNavigateHandler}
       //  to={`/shop/${title}`}
     >
       <BackgroundImage imageUrl={imageUrl} />
@@ -24,4 +24,4 @@ const DirectoryyItem = ({ category }) => {
     </DirectoryItemContainer>
   );
 };
-export default DirectoryyItem;
+export default DirectoryItem;

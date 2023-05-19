@@ -32,18 +32,23 @@ const Checkout = () => {
         </HeaderBlock>
       </CheckoutHeader>
 
-      {cartItems.map((cartItem) => (
-        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-        /* <div key={id}>
-            <h2>{name}</h2>
-            <span>{quantity}</span>
-            <br />
-            <span onClick={() => removeItemToCart(cartItem)}>decrement</span>
-            <br />
-            <span onClick={() => addItemToCart(cartItem)}>increment</span>
-          </div> */
-      ))}
-      <Total>Total : {cartTotal} $ </Total>
+      {cartItems.map((cartItem) => {
+        console.log("cartItem checkout component", cartItem);
+
+        return (
+          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+          /* <div key={id}>
+        <h2>{name}</h2>
+        <span>{quantity}</span>
+        <br />
+        <span onClick={() => removeItemToCart(cartItem)}>decrement</span>
+        <br />
+        <span onClick={() => addItemToCart(cartItem)}>increment</span>
+      </div> */
+        );
+      })}
+
+      <Total>Total : {cartTotal} $</Total>
     </CheckoutContainer>
   );
 };
