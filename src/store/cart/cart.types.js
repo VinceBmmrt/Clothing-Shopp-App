@@ -1,0 +1,3 @@
+export const CART_ACTION_TYPES = {
+  SET_CATEGORIES: "SET_CART_ITEMS",
+};
